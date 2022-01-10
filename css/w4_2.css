@@ -239,7 +239,8 @@ div .stag_but1{
     padding:0px
   }
   .col1{
-    font-size: 25px;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
   
   canvas{
@@ -256,7 +257,8 @@ div .stag_but1{
     width:400%;
   }
   .col1{
-    font-size: 30px;
+    font-size: 20px;
+
   }
 
   .stag_but1 input{
@@ -282,20 +284,21 @@ div .stag_but1{
     margin-left: 0px;
   }
 
-  /* .can1 {
-    padding: 40px !important;
-  }
-   */
+
 
   .can1 input{
     margin-left:10px ;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .can2 input{
     margin-left:10px ;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
+  }
+
+  div .can2{
+    margin-top: 40px;
   }
 
   .stag_but1 input{

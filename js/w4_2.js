@@ -216,3 +216,27 @@ $('#linkClose2').click(function () {
     $('#alert_c1').hide();
 });
 
+
+
+//////////////////////download////////////////////////
+
+
+
+
+var download_img = function() {
+        var canvas = document.getElementById("canvas");
+        var anchor = document.createElement("a");
+        anchor.href = canvas.toDataURL("image/png");
+        anchor.download = "image.png";
+        anchor.click();
+
+  };
+  
+  var download_img1 = function() {
+        var canvas1 = document.getElementById("canvas1");
+        var anchor = document.createElement("a");
+        anchor.href = canvas1.toDataURL("image/png");
+        anchor.download = "image.png";
+        anchor.click();
+
+  };

@@ -54,15 +54,22 @@
                         <canvas id="canvas">
                         </canvas> 
                     <!-- <div class="test_but1"> -->
+
                         <input type="file" 
                         multiple="false" 
                         accept="image/*"
                         id="finput"
                        class="col1 in1"
                         onchange="upload()">
+                      
+                      
+                     
+                        <button type="button" 
+                        class="btn btn-primary"
+                        onclick = "download_img()">
+                        Download</button>
                         <!-- </div> -->
-                  
-                  </div>
+                      </div>
                  
                     <div class="order-sm-last can2 col-xl-6">
                         <h2>
@@ -77,6 +84,11 @@
                         id="finput1"
                         class="col1 in2"
                         onchange="upload1()">
+
+                        <button type="button" 
+                        class="btn btn-primary"
+                        onclick = "download_img1()">
+                        Download</button>
                     </div>    
                   
                 </div>
@@ -114,7 +126,7 @@
                     
                         value = "Steganography"
                         id = "clr"
-                        class="col1 s1 btn btn-primary"
+                        class="col1 s1 btn btn-warning"
                         onclick = "stag()">
                 
                         <input type = "button"
