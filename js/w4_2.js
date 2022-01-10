@@ -6,33 +6,106 @@ var stego;
 var stego1;
 var image3;
 var image4;
-
+var test;
 
 function stag(){
+
+alert("Processing data... this may take a while. Please be patient");
+
+////////////////////test////////////////////////
+
+
 
 var start = new SimpleImage(image2);
 var hide = new SimpleImage(image1);
 
-start = chop2hide(start);
-hide = shift(hide);
-stego = combine(start,hide);
-stego1 = combine(start,hide);
 
 
-var canvas1 = document.getElementById("canvas");
+    var someImg = new SimpleImage(image1);
+    var height = someImg.getHeight(); 
+    var width = someImg.getWidth(); 
 
-var ctx1 = canvas1.getContext("2d");
+   
+   var someImg2 = new SimpleImage(image2);
+    var height2 = someImg2.getHeight(); 
+    var width2 = someImg2.getWidth(); 
 
-ctx1.clearRect(0,0,canvas1.width, canvas1.height);
+   
+   if(height == height2 && width == width2){
+    //    alert('stag can be performend')
+       start = chop2hide(start);
+        hide = shift(hide);
+        stego = combine(start,hide);
+        stego1 = combine(start,hide);
+            test = true;
 
-// alert("Process sucessfull! Image1 has been hidden in Image2. Download Image2 to save result");
+            
+        var canvas1 = document.getElementById("canvas");
+
+        var ctx1 = canvas1.getContext("2d");
+
+        ctx1.clearRect(0,0,canvas1.width, canvas1.height);
 
 
-var canvas = document.getElementById("canvas1")
-stego.drawTo(canvas)
+        var canvas = document.getElementById("canvas1")
+        stego.drawTo(canvas)
+   }
+   else{
+       alert("Images are of different resoluton and cropping needs to be performed")
+
+        crop_test();
+        
+
+        }
+
+}
+
+//////////////crop test////////////////
+
+var crop_test = function(){
+
+    function crop(image, width, height){
+        var n = new SimpleImage(width,height);
+        for(var p of image.values()){
+             var x = p.getX();
+             var y = p.getY();
+            if (x<width && y<height) {
+                var np = n.getPixel(x,y);
+                np.setRed(p.getRed());
+                np.setGreen(p.getGreen());
+                np.setBlue(p.getBlue());
+            }
+        }
+        return n;
+   }
+        
+        var start = new SimpleImage(image2);
+        var hide = new SimpleImage(image1);
+
+        var cropWidth = start.getWidth();
+        if (hide.getWidth() < cropWidth) {
+            cropWidth = hide.getWidth();
+        }
+        var cropHeight = start.getHeight();
+        if (hide.getHeight() < cropHeight) {
+            cropHeight = hide.getHeight();
+        }
+        
+        start = crop(start, cropWidth, cropHeight);
+        hide = crop(hide, cropWidth, cropHeight);
+        start = chop2hide(start);
+        hide = shift(hide);
+        stego = combine(start,hide);
+
+        var canvas1 = document.getElementById("canvas");
+
+        var ctx1 = canvas1.getContext("2d");
+
+        ctx1.clearRect(0,0,canvas1.width, canvas1.height);
 
 
-
+        var canvas = document.getElementById("canvas1")
+        stego.drawTo(canvas)
 }
 
 function upload(){
@@ -186,11 +259,10 @@ function clearCanvas(){
 }
 
 
-// $(".s1").click(function(){
-//     $('#alert_s1').modal({
-//     keyboard: false
-//     })
-// });
+
+
+//////////////////////////alert//////////////////////////
+
 
 
 
@@ -198,8 +270,8 @@ $('.s1').click(function () {
     $('#alert_s1').show('fade');
 });
 $('#linkClose').click(function () {
-    $('#alert_s1').hide('fade');
-});
+        $('#alert_s1').hide('fade');
+});    
 
 
 $('.e1').click(function () {
@@ -208,6 +280,7 @@ $('.e1').click(function () {
 $('#linkClose1').click(function () {
     $('#alert_e1').hide();
 });
+
 
 $('.c1').click(function () {
     $('#alert_c1').show();
@@ -240,3 +313,8 @@ var download_img = function() {
         anchor.click();
 
   };
+
+  
+
+
+ 

@@ -275,9 +275,6 @@ div .stag_but1{
     height: 250px;
   }
 
-  /* body{
-    height: 110px;
-  } */
 
   div .test1{
     padding-left: 0px;
@@ -307,4 +304,22 @@ div .stag_but1{
 
   
 }
+
+
+/* ///////////////////////about/////////////////////////////// */
+
+.container .what, .container .how, .container .use, .points{
+  color: whitesmoke;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.what p, .how p, .points{
+  text-align: left;
+  /* font-size: 15px; */
+}
+
+
 
