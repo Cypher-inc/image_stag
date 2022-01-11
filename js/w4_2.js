@@ -96,6 +96,7 @@ var crop_test = function(){
         start = chop2hide(start);
         hide = shift(hide);
         stego = combine(start,hide);
+        stego1 = combine(start,hide);
 
         var canvas1 = document.getElementById("canvas");
 

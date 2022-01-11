@@ -10,7 +10,9 @@
     height:300px;
     border: 1px solid;
     /* box-shadow: 5px 10px 18px #888888; */
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px,
+    rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
      margin: 10px;
     }
 
@@ -112,6 +114,10 @@ nav{
 nav button{
   color: #579abe !important;
   background-color: #579abe !important;
+}
+
+div .navbar-nav .active, .navbar-brand{
+  filter: brightness(140%);
 }
 /* //////////////////buttons///////////////////// */
 
@@ -308,7 +314,7 @@ div .stag_but1{
 
 /* ///////////////////////about/////////////////////////////// */
 
-.container .what, .container .how, .container .use, .points{
+.container .what, .container .how, .container .use, .points, .container .hide, .container .extract{
   color: whitesmoke;
   margin-left: auto;
   margin-right: auto;
@@ -318,8 +324,22 @@ div .stag_but1{
 
 .what p, .how p, .points{
   text-align: left;
-  /* font-size: 15px; */
+  font-size: 17px;
 }
 
 
 
+/* //////////////////////////instructions////////////////// */
+
+.container .hide, .container .extract{
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+  rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, 
+  rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+  background:rgba(0, 0, 0, 0.3)
+  /* opacity: 0.1; */
+}
+
+.container .hide p{
+  font-size: 18px;
+}
