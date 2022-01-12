@@ -260,3 +260,15 @@ function Rainbow(){
     Rainbowimage1.drawTo(canvas1)
    
 }
+
+
+//////////////////download////////////////////
+
+var download_img2 = function() {
+    var canvas = document.getElementById("canvas");
+    var anchor = document.createElement("a");
+    anchor.href = canvas.toDataURL("image/png");
+    anchor.download = "f_image.png";
+    anchor.click();
+
+};

@@ -49,13 +49,15 @@ var hide = new SimpleImage(image1);
 
         var canvas = document.getElementById("canvas1")
         stego.drawTo(canvas)
+
+        // download_img1()
    }
    else{
-       alert("Images are of different resoluton and cropping needs to be performed")
+       alert("WARNING: Images are of different resolutons, cropping is being performed (some data may be lost in this process")
 
         crop_test();
         
-
+        // download_img1()
         }
 
 }
@@ -159,6 +161,8 @@ function extractionMain(){
     extraction1();
 
     extraction();
+
+    // download_img()
 
 }
 
@@ -310,7 +314,7 @@ var download_img = function() {
         var canvas1 = document.getElementById("canvas1");
         var anchor = document.createElement("a");
         anchor.href = canvas1.toDataURL("image/png");
-        anchor.download = "image.png";
+        anchor.download = "hidden_image.png";
         anchor.click();
 
   };

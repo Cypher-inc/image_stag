@@ -13,7 +13,7 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
     rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px,
     rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
-     margin: 10px;
+     /* margin: 10px; */
     }
 
     .can_cont{
@@ -185,6 +185,8 @@ div .stag_but1{
 #alert_s1, #alert_e1, #alert_c1{
   margin-bottom: 0px;
 }
+
+
 /* //////////////////media/////////////////////// */
 
 @media (max-width: 1200px) {
@@ -244,6 +246,7 @@ div .stag_but1{
     margin:0px;
     padding:0px
   }
+
   .col1{
     font-size: 20px;
     margin-bottom: 20px;
@@ -256,12 +259,21 @@ div .stag_but1{
 }
 
 @media (max-width: 567px){
+
   #myVideo{
-    position: fixed;
+    /* position: fixed;
     right: 0;
-    /* bottom: 0; */
-    width:400%;
+    width:400%; */
+    display: none;
   }
+
+ 
+    body {
+      background: url("../media/vm1.png") no-repeat;
+      background-repeat: no-repeat;
+      background-size:cover;
+    }
+  
   .col1{
     font-size: 20px;
 
@@ -278,7 +290,7 @@ div .stag_but1{
   }
 
   canvas{
-    height: 250px;
+    height: 240px;
   }
 
 
@@ -290,12 +302,12 @@ div .stag_but1{
 
 
   .can1 input{
-    margin-left:10px ;
+    /* margin-left:10px ; */
     margin-bottom: 20px;
   }
 
   .can2 input{
-    margin-left:10px ;
+    /* margin-left:10px ; */
     margin-bottom: 20px;
 
   }
@@ -331,7 +343,7 @@ div .stag_but1{
 
 /* //////////////////////////instructions////////////////// */
 
-.container .hide, .container .extract{
+.container .hide, .container .extract, .about-hide{
   border: 1px solid black;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
   rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, 
