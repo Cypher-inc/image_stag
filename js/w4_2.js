@@ -314,7 +314,7 @@ var download_img = function() {
         var canvas1 = document.getElementById("canvas1");
         var anchor = document.createElement("a");
         anchor.href = canvas1.toDataURL("image/png");
-        anchor.download = "hidden_image.png";
+        anchor.download = "hidden_img.png";
         anchor.click();
 
   };
