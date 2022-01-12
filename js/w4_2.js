@@ -53,7 +53,7 @@ var hide = new SimpleImage(image1);
         // download_img1()
    }
    else{
-       alert("WARNING: Images are of different resolutons, cropping is being performed (some data may be lost in this process")
+       alert("WARNING: Images are of different resolutons, cropping is being performed (some data may be lost in this process)")
 
         crop_test();
         
